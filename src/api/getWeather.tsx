@@ -6,8 +6,8 @@ const url = 'http://api.openweathermap.org/data/2.5/weather';
 
 const convertF = (temp: any) => {
 	const celsius = temp - 273.15;
-	// const fahrenheit = (celsius * 1.8) + 32;
-	return celsius.toFixed(2) + '℉';
+	const fahrenheit = (celsius * 1.8) + 32;
+	return fahrenheit.toFixed(2) + '℉';
 }
 export const getWeatherData = (city: string) => {
 	return new Promise((resolve, reject) => {
